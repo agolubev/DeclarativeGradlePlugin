@@ -6,7 +6,7 @@ pluginManagement {
             url = uri("file:/Users/alexgolubev/src/studio-main/prebuilts/tools/common/m2/repository/")
         }
         maven {
-               url = uri("file:/Users/alexgolubev/.m2/repository")
+            url = uri("file:/Users/alexgolubev/.m2/repository")
         }
         maven {
             url = uri("file:/Users/alexgolubev/src/studio-main/out/repo/")
@@ -18,14 +18,15 @@ plugins {
     id("com.android.experiments.declarative.settings").version("0.1")
 }
 dependencyResolutionManagement {
-repositories {
-    google()
-    mavenCentral()
-    maven {
-        url = uri("file:/Users/alexgolubev/src/studio-main/prebuilts/tools/common/m2/repository/")
-    }
-    maven {
-        url = uri("file:/Users/alexgolubev/src/studio-main/out/repo/")
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url = uri("file:/Users/alexgolubev/src/studio-main/prebuilts/tools/common/m2/repository/")
+        }
+        maven {
+            url = uri("file:/Users/alexgolubev/src/studio-main/out/repo/")
+        }
     }
 }
 
