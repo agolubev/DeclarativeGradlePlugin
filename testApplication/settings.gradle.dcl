@@ -41,6 +41,3 @@ defaults {
 }
 
 rootProject.name = "My Application"
-lazyIncludes {
-    focusedModules = ":app,:app2"
-}
