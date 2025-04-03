@@ -14,7 +14,7 @@ pluginManagement {
     }
 }
 plugins {
-    id("com.android.ecosystem").version("8.10.0-dev")
+    id("com.android.ecosystem").version("8.11.0-dev")
     id("com.android.experiments.declarative.settings").version("0.1")
 }
 dependencyResolutionManagement {
@@ -33,7 +33,6 @@ dependencyResolutionManagement {
 defaults {
     androidApp {
         compileSdk = 34
-
     }
 
     androidLibrary {
