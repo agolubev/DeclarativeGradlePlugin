@@ -7,7 +7,7 @@ changes. Studio Focus plugin will use it for development and demo purposes.
 Plugin itself is a simplified version of past Gradle declarative 
 experiment https://github.com/jdochez/gradle-declarative/tree/main/settings-api
 Current version has module dependency resolution. It
-parses modules `build.gradle.dcl` files to find dependent modules it needs to include.
+parses `focus.properties` to find out all and focused modules modules
 
 ## Steps to try
 
@@ -27,6 +27,7 @@ plugins {
 ```
 
 3. Add local repository declaration to setting file 
+
 ```
 pluginManagement {
     repositories {
@@ -37,19 +38,26 @@ pluginManagement {
 }
 
 ``` 
-4. Add modules list you want to include in `lazyIncludes` block into settings
+
+5. Add modules list and focused in `focus.properties`. For example:
+
 ```
-lazyIncludes {
-    focusedModules = ":app,:app2"
-}
+allModules=app,app2,mylibrary2
+focus=app,app2,mylibrary2
+```
+
+5. To see that focused modules are included in Gradle build type in command line
+
+```
+./gradlew -q projects
 ```
 
 ## Test Application
 `testApplication` folder has application you may want to try.
-You need to adjust multiple repository declarations in `settings.gradle.dcl` file 
-for your local environment. 
 
-Test application includes `app` and `app2` modules in Gradle build by default.
-Also, `app` has dependency to `mylibrary2` module so plugin includes it into build as well.
+## Studio Experience
+You can also open `testApplicaiton` in nightly build and see Focus Studio
+plugin. You need set `gradle.declarative.focus.feature` registry property to true
+
 
 
