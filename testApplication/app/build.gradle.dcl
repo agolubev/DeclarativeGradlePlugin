@@ -26,42 +26,6 @@ androidApp {
         buildConfigField("Integer", "MY_FIELD", "0")
     }
 
-    /*compileOptionsDcl {
-        encoding = "utf-8"
-        sourceCompatibility = getjava17()
-        targetCompatibility = getjava17()
-    }*/
-
-    //    sourceSets {
-    //        configure("main") {
-    //            kotlin {
-    //                srcDir("src/main/kotlin")
-    //                srcDir("src/main/other/kotlin")
-    //            }
-    //        }
-    //    }
-
-    //some comment here
-    /*libraryBuildTypes {
-        debug {
-            isMinifyEnabled = false
-
-            //            dependencies {
-            //                implementation("com.google.guava:guava:30.1.1-jre")
-            //            }
-        }
-
-        release {
-            isMinifyEnabled = true
-        }
-        create("some") {
-            isMinifyEnabled = true
-        }
-        create("benchmark") {
-            isMinifyEnabled = false
-        }
-    }*/
-
     buildTypes {
 
       buildType("dsfsdf"){ isMinifyEnabled = true }
